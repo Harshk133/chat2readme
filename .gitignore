@@ -220,3 +220,6 @@ __marimo__/
 
 .vscode
 .venv
+
+app/json
+app/readmes
