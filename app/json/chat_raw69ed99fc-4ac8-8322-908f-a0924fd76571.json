@@ -1,0 +1,837 @@
+{
+  "title": "Blueprint Poster Design",
+  "create_time": 1777179132.297773,
+  "update_time": 1777180640.623307,
+  "mapping": {
+    "client-created-root": {
+      "id": "client-created-root",
+      "children": [
+        "cf7bf05b-4e97-4373-949d-e04aefe65e78"
+      ]
+    },
+    "cf7bf05b-4e97-4373-949d-e04aefe65e78": {
+      "id": "cf7bf05b-4e97-4373-949d-e04aefe65e78",
+      "message": {
+        "id": "cf7bf05b-4e97-4373-949d-e04aefe65e78",
+        "author": {
+          "role": "system",
+          "metadata": {}
+        },
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 0.0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "shared_conversation_id": "69ed99fc-4ac8-8322-908f-a0924fd76571",
+          "can_save": false
+        },
+        "recipient": "all"
+      },
+      "parent": "client-created-root",
+      "children": [
+        "d317edba-8a18-4dcc-9466-9891707b1ba0"
+      ]
+    },
+    "d317edba-8a18-4dcc-9466-9891707b1ba0": {
+      "id": "d317edba-8a18-4dcc-9466-9891707b1ba0",
+      "message": {
+        "id": "d317edba-8a18-4dcc-9466-9891707b1ba0",
+        "author": {
+          "role": "system",
+          "metadata": {}
+        },
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 0.0,
+        "metadata": {
+          "rebase_developer_message": true,
+          "shared_conversation_id": "69ed99fc-4ac8-8322-908f-a0924fd76571",
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all"
+      },
+      "parent": "cf7bf05b-4e97-4373-949d-e04aefe65e78",
+      "children": [
+        "81a28646-a5f6-4804-9444-64f6daaf0397"
+      ]
+    },
+    "81a28646-a5f6-4804-9444-64f6daaf0397": {
+      "id": "81a28646-a5f6-4804-9444-64f6daaf0397",
+      "message": {
+        "id": "81a28646-a5f6-4804-9444-64f6daaf0397",
+        "author": {
+          "role": "user",
+          "metadata": {}
+        },
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "Original custom instructions no longer available"
+          ]
+        },
+        "status": "finished_successfully",
+        "weight": 1.0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "user_context_message_data": null,
+          "is_user_system_message": true,
+          "shared_conversation_id": "69ed99fc-4ac8-8322-908f-a0924fd76571",
+          "is_redacted": true
+        },
+        "recipient": "all"
+      },
+      "parent": "d317edba-8a18-4dcc-9466-9891707b1ba0",
+      "children": [
+        "d1c4ec11-d750-4cee-acb8-10b4dfdb7450"
+      ]
+    },
+    "d1c4ec11-d750-4cee-acb8-10b4dfdb7450": {
+      "id": "d1c4ec11-d750-4cee-acb8-10b4dfdb7450",
+      "message": {
+        "id": "d1c4ec11-d750-4cee-acb8-10b4dfdb7450",
+        "author": {
+          "role": "system",
+          "metadata": {}
+        },
+        "create_time": 1777179009.877892,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "weight": 0.0,
+        "metadata": {
+          "system_hints": [
+            "picture_v2"
+          ],
+          "request_id": "32fe09a9-d556-4bc6-b4ce-711f38320b24",
+          "message_source": null,
+          "turn_exchange_id": "3fa51710-c77d-49d6-9bd3-568f59e5db3b",
+          "shared_conversation_id": "69ed99fc-4ac8-8322-908f-a0924fd76571",
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all"
+      },
+      "parent": "81a28646-a5f6-4804-9444-64f6daaf0397",
+      "children": [
+        "0459fb98-d903-4d30-8a03-b23c9c580e1d"
+      ]
+    },
+    "0459fb98-d903-4d30-8a03-b23c9c580e1d": {
+      "id": "0459fb98-d903-4d30-8a03-b23c9c580e1d",
+      "message": {
+        "id": "0459fb98-d903-4d30-8a03-b23c9c580e1d",
+        "author": {
+          "role": "user",
+          "metadata": {}
+        },
+        "create_time": 1777179009.915,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "Create a single-subject blueprint poster using only the main subject from the uploaded image. Render it as a clean white technical line drawing on a deep cobalt-blue blueprint background with a subtle grid. Use flat 2D schematic linework, orthographic contours, construction lines, measurement ticks, arrows, and minimal technical labels. The composition may also include 2-3 smaller inset studies or alternate views. Keep the layout simple and balanced with no shading, no 3D, no lighting, no extra objects."
+          ]
+        },
+        "status": "finished_successfully",
+        "weight": 1.0,
+        "metadata": {
+          "selected_github_repos": [],
+          "system_hints": [
+            "picture_v2"
+          ],
+          "serialization_metadata": {
+            "custom_symbol_offsets": []
+          },
+          "image_prompt_id": "blueprint",
+          "request_id": "32fe09a9-d556-4bc6-b4ce-711f38320b24",
+          "message_source": null,
+          "turn_exchange_id": "3fa51710-c77d-49d6-9bd3-568f59e5db3b",
+          "resolved_model_slug": "gpt-5-3",
+          "shared_conversation_id": "69ed99fc-4ac8-8322-908f-a0924fd76571",
+          "can_save": false
+        },
+        "recipient": "all"
+      },
+      "parent": "d1c4ec11-d750-4cee-acb8-10b4dfdb7450",
+      "children": [
+        "3e3744fd-490d-4aa9-a81a-7a7aa78638be"
+      ]
+    },
+    "3e3744fd-490d-4aa9-a81a-7a7aa78638be": {
+      "id": "3e3744fd-490d-4aa9-a81a-7a7aa78638be",
+      "message": {
+        "id": "3e3744fd-490d-4aa9-a81a-7a7aa78638be",
+        "author": {
+          "role": "assistant",
+          "metadata": {}
+        },
+        "create_time": 1777179009.9970942,
+        "content": {
+          "content_type": "model_editable_context",
+          "model_set_context": ""
+        },
+        "status": "finished_successfully",
+        "weight": 1.0,
+        "metadata": {
+          "shared_conversation_id": "69ed99fc-4ac8-8322-908f-a0924fd76571",
+          "is_redacted": true
+        },
+        "recipient": "all"
+      },
+      "parent": "0459fb98-d903-4d30-8a03-b23c9c580e1d",
+      "children": [
+        "e83fc6bf-56c5-4b89-a2f6-308fe131cd7b"
+      ]
+    },
+    "e83fc6bf-56c5-4b89-a2f6-308fe131cd7b": {
+      "id": "e83fc6bf-56c5-4b89-a2f6-308fe131cd7b",
+      "message": {
+        "id": "e83fc6bf-56c5-4b89-a2f6-308fe131cd7b",
+        "author": {
+          "role": "assistant",
+          "metadata": {}
+        },
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "We’re so sorry, but the image we created may violate our guardrails around illicit or illegal activities. If you think we got it wrong, please retry or edit your prompt."
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 1.0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "content_references": [],
+          "shared_conversation_id": "69ed99fc-4ac8-8322-908f-a0924fd76571",
+          "can_save": false
+        },
+        "recipient": "all"
+      },
+      "parent": "3e3744fd-490d-4aa9-a81a-7a7aa78638be",
+      "children": [
+        "eac96f03-ee37-4f01-8fa6-81a607712a6c"
+      ]
+    },
+    "eac96f03-ee37-4f01-8fa6-81a607712a6c": {
+      "id": "eac96f03-ee37-4f01-8fa6-81a607712a6c",
+      "message": {
+        "id": "eac96f03-ee37-4f01-8fa6-81a607712a6c",
+        "author": {
+          "role": "assistant",
+          "metadata": {}
+        },
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "We’re so sorry, but the image we created may violate our guardrails around illicit or illegal activities. If you think we got it wrong, please retry or edit your prompt."
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 1.0,
+        "metadata": {
+          "async_task_id": "imagegen_69ed998447b88191808313de6ca2e355",
+          "async_task_type": "image_gen",
+          "is_error": true,
+          "response_message_id": "eac96f03-ee37-4f01-8fa6-81a607712a6c",
+          "turn_exchange_id": "3fa51710-c77d-49d6-9bd3-568f59e5db3b",
+          "content_references": [],
+          "shared_conversation_id": "69ed99fc-4ac8-8322-908f-a0924fd76571",
+          "can_save": true
+        },
+        "recipient": "all"
+      },
+      "parent": "e83fc6bf-56c5-4b89-a2f6-308fe131cd7b",
+      "children": [
+        "6df8b079-f1bc-4013-960b-c7eb644b5301"
+      ]
+    },
+    "6df8b079-f1bc-4013-960b-c7eb644b5301": {
+      "id": "6df8b079-f1bc-4013-960b-c7eb644b5301",
+      "message": {
+        "id": "6df8b079-f1bc-4013-960b-c7eb644b5301",
+        "author": {
+          "role": "user",
+          "metadata": {}
+        },
+        "create_time": 1777179075.827,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "create a image of python programming language logo"
+          ]
+        },
+        "status": "finished_successfully",
+        "weight": 1.0,
+        "metadata": {
+          "selected_github_repos": [],
+          "serialization_metadata": {
+            "custom_symbol_offsets": []
+          },
+          "request_id": "817002b7-7d40-4568-ac95-1372a47846d4",
+          "message_source": null,
+          "turn_exchange_id": "911631a8-b5f4-4ca5-9021-936f543c8a2c",
+          "resolved_model_slug": "gpt-5-3",
+          "shared_conversation_id": "69ed99fc-4ac8-8322-908f-a0924fd76571",
+          "can_save": false
+        },
+        "recipient": "all"
+      },
+      "parent": "eac96f03-ee37-4f01-8fa6-81a607712a6c",
+      "children": [
+        "b4e0271c-e250-4d9a-936d-67a3fee9bd83"
+      ]
+    },
+    "b4e0271c-e250-4d9a-936d-67a3fee9bd83": {
+      "id": "b4e0271c-e250-4d9a-936d-67a3fee9bd83",
+      "message": {
+        "id": "b4e0271c-e250-4d9a-936d-67a3fee9bd83",
+        "author": {
+          "role": "assistant",
+          "metadata": {}
+        },
+        "create_time": 1777179075.90204,
+        "content": {
+          "content_type": "code",
+          "language": "json",
+          "text": "{\"prompt\": null, \"size\": \"1024x1024\", \"transparent_background\": true}"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1.0,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200012
+            ]
+          },
+          "is_complete": true,
+          "citations": [],
+          "content_references": [],
+          "resolved_model_slug": "gpt-5-3",
+          "request_id": "817002b7-7d40-4568-ac95-1372a47846d4",
+          "message_type": "next",
+          "turn_exchange_id": "911631a8-b5f4-4ca5-9021-936f543c8a2c",
+          "model_slug": "gpt-5-3",
+          "default_model_slug": "gpt-5-3",
+          "parent_id": "7197d1b0-5453-4110-80ad-de58bc10d032",
+          "shared_conversation_id": "69ed99fc-4ac8-8322-908f-a0924fd76571",
+          "can_save": false
+        },
+        "recipient": "t2uay3k.sj1i4kz",
+        "channel": "commentary"
+      },
+      "parent": "6df8b079-f1bc-4013-960b-c7eb644b5301",
+      "children": [
+        "ba4c5f45-64fe-417d-ac2d-e8aeb4b62aeb"
+      ]
+    },
+    "ba4c5f45-64fe-417d-ac2d-e8aeb4b62aeb": {
+      "id": "ba4c5f45-64fe-417d-ac2d-e8aeb4b62aeb",
+      "message": {
+        "id": "ba4c5f45-64fe-417d-ac2d-e8aeb4b62aeb",
+        "author": {
+          "role": "tool",
+          "name": "t2uay3k.sj1i4kz",
+          "metadata": {}
+        },
+        "content": {
+          "content_type": "multimodal_text",
+          "parts": [
+            {
+              "content_type": "image_asset_pointer",
+              "asset_pointer": "sediment://file_0000000021a87208903a6e5f919c85f8?shared_conversation_id=69ed99fc-4ac8-8322-908f-a0924fd76571",
+              "size_bytes": 2635926,
+              "width": 1536,
+              "height": 1024,
+              "metadata": {
+                "dalle": {
+                  "gen_id": "ab2dca07-cdbe-45a9-8466-731c22e6a0a2",
+                  "prompt": "",
+                  "serialization_title": "DALL-E generation metadata"
+                },
+                "generation": {
+                  "gen_id": "ab2dca07-cdbe-45a9-8466-731c22e6a0a2",
+                  "gen_size": "xlimage",
+                  "height": 1024,
+                  "width": 1536,
+                  "transparent_background": true,
+                  "serialization_title": "Image Generation metadata",
+                  "orientation": "landscape"
+                },
+                "container_pixel_height": 1024,
+                "container_pixel_width": 1536,
+                "sanitized": false
+              }
+            }
+          ]
+        },
+        "status": "finished_successfully",
+        "weight": 0.0,
+        "metadata": {
+          "async_task_id": "imagegen_69ed99c92d0481919e13c4aff014d7cf",
+          "async_task_title": "Python logo blueprint drawing",
+          "async_task_type": "image_gen",
+          "image_gen_title": "Python logo blueprint drawing",
+          "response_message_id": "ba4c5f45-64fe-417d-ac2d-e8aeb4b62aeb",
+          "turn_exchange_id": "911631a8-b5f4-4ca5-9021-936f543c8a2c",
+          "shared_conversation_id": "69ed99fc-4ac8-8322-908f-a0924fd76571",
+          "can_save": false
+        },
+        "recipient": "all"
+      },
+      "parent": "b4e0271c-e250-4d9a-936d-67a3fee9bd83",
+      "children": []
+    }
+  },
+  "moderation_results": [],
+  "current_node": "ba4c5f45-64fe-417d-ac2d-e8aeb4b62aeb",
+  "conversation_id": "69ed99fc-4ac8-8322-908f-a0924fd76571",
+  "is_archived": false,
+  "safe_urls": [],
+  "blocked_urls": [],
+  "default_model_slug": "gpt-5-3",
+  "disabled_tool_ids": [],
+  "is_temporary_chat": false,
+  "is_do_not_remember": false,
+  "memory_scope": "global_enabled",
+  "context_scopes": [
+    "GLOBAL"
+  ],
+  "sugar_item_visible": false,
+  "is_study_mode": false,
+  "is_public": true,
+  "linear_conversation": [
+    {
+      "id": "client-created-root",
+      "children": [
+        "cf7bf05b-4e97-4373-949d-e04aefe65e78"
+      ]
+    },
+    {
+      "id": "cf7bf05b-4e97-4373-949d-e04aefe65e78",
+      "message": {
+        "id": "cf7bf05b-4e97-4373-949d-e04aefe65e78",
+        "author": {
+          "role": "system",
+          "metadata": {}
+        },
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 0.0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "shared_conversation_id": "69ed99fc-4ac8-8322-908f-a0924fd76571",
+          "can_save": false
+        },
+        "recipient": "all"
+      },
+      "parent": "client-created-root",
+      "children": [
+        "d317edba-8a18-4dcc-9466-9891707b1ba0"
+      ]
+    },
+    {
+      "id": "d317edba-8a18-4dcc-9466-9891707b1ba0",
+      "message": {
+        "id": "d317edba-8a18-4dcc-9466-9891707b1ba0",
+        "author": {
+          "role": "system",
+          "metadata": {}
+        },
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 0.0,
+        "metadata": {
+          "rebase_developer_message": true,
+          "shared_conversation_id": "69ed99fc-4ac8-8322-908f-a0924fd76571",
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all"
+      },
+      "parent": "cf7bf05b-4e97-4373-949d-e04aefe65e78",
+      "children": [
+        "81a28646-a5f6-4804-9444-64f6daaf0397"
+      ]
+    },
+    {
+      "id": "81a28646-a5f6-4804-9444-64f6daaf0397",
+      "message": {
+        "id": "81a28646-a5f6-4804-9444-64f6daaf0397",
+        "author": {
+          "role": "user",
+          "metadata": {}
+        },
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "Original custom instructions no longer available"
+          ]
+        },
+        "status": "finished_successfully",
+        "weight": 1.0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "user_context_message_data": null,
+          "is_user_system_message": true,
+          "shared_conversation_id": "69ed99fc-4ac8-8322-908f-a0924fd76571",
+          "is_redacted": true
+        },
+        "recipient": "all"
+      },
+      "parent": "d317edba-8a18-4dcc-9466-9891707b1ba0",
+      "children": [
+        "d1c4ec11-d750-4cee-acb8-10b4dfdb7450"
+      ]
+    },
+    {
+      "id": "d1c4ec11-d750-4cee-acb8-10b4dfdb7450",
+      "message": {
+        "id": "d1c4ec11-d750-4cee-acb8-10b4dfdb7450",
+        "author": {
+          "role": "system",
+          "metadata": {}
+        },
+        "create_time": 1777179009.877892,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "weight": 0.0,
+        "metadata": {
+          "system_hints": [
+            "picture_v2"
+          ],
+          "request_id": "32fe09a9-d556-4bc6-b4ce-711f38320b24",
+          "message_source": null,
+          "turn_exchange_id": "3fa51710-c77d-49d6-9bd3-568f59e5db3b",
+          "shared_conversation_id": "69ed99fc-4ac8-8322-908f-a0924fd76571",
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all"
+      },
+      "parent": "81a28646-a5f6-4804-9444-64f6daaf0397",
+      "children": [
+        "0459fb98-d903-4d30-8a03-b23c9c580e1d"
+      ]
+    },
+    {
+      "id": "0459fb98-d903-4d30-8a03-b23c9c580e1d",
+      "message": {
+        "id": "0459fb98-d903-4d30-8a03-b23c9c580e1d",
+        "author": {
+          "role": "user",
+          "metadata": {}
+        },
+        "create_time": 1777179009.915,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "Create a single-subject blueprint poster using only the main subject from the uploaded image. Render it as a clean white technical line drawing on a deep cobalt-blue blueprint background with a subtle grid. Use flat 2D schematic linework, orthographic contours, construction lines, measurement ticks, arrows, and minimal technical labels. The composition may also include 2-3 smaller inset studies or alternate views. Keep the layout simple and balanced with no shading, no 3D, no lighting, no extra objects."
+          ]
+        },
+        "status": "finished_successfully",
+        "weight": 1.0,
+        "metadata": {
+          "selected_github_repos": [],
+          "system_hints": [
+            "picture_v2"
+          ],
+          "serialization_metadata": {
+            "custom_symbol_offsets": []
+          },
+          "image_prompt_id": "blueprint",
+          "request_id": "32fe09a9-d556-4bc6-b4ce-711f38320b24",
+          "message_source": null,
+          "turn_exchange_id": "3fa51710-c77d-49d6-9bd3-568f59e5db3b",
+          "resolved_model_slug": "gpt-5-3",
+          "shared_conversation_id": "69ed99fc-4ac8-8322-908f-a0924fd76571",
+          "can_save": false
+        },
+        "recipient": "all"
+      },
+      "parent": "d1c4ec11-d750-4cee-acb8-10b4dfdb7450",
+      "children": [
+        "3e3744fd-490d-4aa9-a81a-7a7aa78638be"
+      ]
+    },
+    {
+      "id": "3e3744fd-490d-4aa9-a81a-7a7aa78638be",
+      "message": {
+        "id": "3e3744fd-490d-4aa9-a81a-7a7aa78638be",
+        "author": {
+          "role": "assistant",
+          "metadata": {}
+        },
+        "create_time": 1777179009.9970942,
+        "content": {
+          "content_type": "model_editable_context",
+          "model_set_context": ""
+        },
+        "status": "finished_successfully",
+        "weight": 1.0,
+        "metadata": {
+          "shared_conversation_id": "69ed99fc-4ac8-8322-908f-a0924fd76571",
+          "is_redacted": true
+        },
+        "recipient": "all"
+      },
+      "parent": "0459fb98-d903-4d30-8a03-b23c9c580e1d",
+      "children": [
+        "e83fc6bf-56c5-4b89-a2f6-308fe131cd7b"
+      ]
+    },
+    {
+      "id": "e83fc6bf-56c5-4b89-a2f6-308fe131cd7b",
+      "message": {
+        "id": "e83fc6bf-56c5-4b89-a2f6-308fe131cd7b",
+        "author": {
+          "role": "assistant",
+          "metadata": {}
+        },
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "We’re so sorry, but the image we created may violate our guardrails around illicit or illegal activities. If you think we got it wrong, please retry or edit your prompt."
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 1.0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "content_references": [],
+          "shared_conversation_id": "69ed99fc-4ac8-8322-908f-a0924fd76571",
+          "can_save": false
+        },
+        "recipient": "all"
+      },
+      "parent": "3e3744fd-490d-4aa9-a81a-7a7aa78638be",
+      "children": [
+        "eac96f03-ee37-4f01-8fa6-81a607712a6c"
+      ]
+    },
+    {
+      "id": "eac96f03-ee37-4f01-8fa6-81a607712a6c",
+      "message": {
+        "id": "eac96f03-ee37-4f01-8fa6-81a607712a6c",
+        "author": {
+          "role": "assistant",
+          "metadata": {}
+        },
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "We’re so sorry, but the image we created may violate our guardrails around illicit or illegal activities. If you think we got it wrong, please retry or edit your prompt."
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 1.0,
+        "metadata": {
+          "async_task_id": "imagegen_69ed998447b88191808313de6ca2e355",
+          "async_task_type": "image_gen",
+          "is_error": true,
+          "response_message_id": "eac96f03-ee37-4f01-8fa6-81a607712a6c",
+          "turn_exchange_id": "3fa51710-c77d-49d6-9bd3-568f59e5db3b",
+          "content_references": [],
+          "shared_conversation_id": "69ed99fc-4ac8-8322-908f-a0924fd76571",
+          "can_save": true
+        },
+        "recipient": "all"
+      },
+      "parent": "e83fc6bf-56c5-4b89-a2f6-308fe131cd7b",
+      "children": [
+        "6df8b079-f1bc-4013-960b-c7eb644b5301"
+      ]
+    },
+    {
+      "id": "6df8b079-f1bc-4013-960b-c7eb644b5301",
+      "message": {
+        "id": "6df8b079-f1bc-4013-960b-c7eb644b5301",
+        "author": {
+          "role": "user",
+          "metadata": {}
+        },
+        "create_time": 1777179075.827,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "create a image of python programming language logo"
+          ]
+        },
+        "status": "finished_successfully",
+        "weight": 1.0,
+        "metadata": {
+          "selected_github_repos": [],
+          "serialization_metadata": {
+            "custom_symbol_offsets": []
+          },
+          "request_id": "817002b7-7d40-4568-ac95-1372a47846d4",
+          "message_source": null,
+          "turn_exchange_id": "911631a8-b5f4-4ca5-9021-936f543c8a2c",
+          "resolved_model_slug": "gpt-5-3",
+          "shared_conversation_id": "69ed99fc-4ac8-8322-908f-a0924fd76571",
+          "can_save": false
+        },
+        "recipient": "all"
+      },
+      "parent": "eac96f03-ee37-4f01-8fa6-81a607712a6c",
+      "children": [
+        "b4e0271c-e250-4d9a-936d-67a3fee9bd83"
+      ]
+    },
+    {
+      "id": "b4e0271c-e250-4d9a-936d-67a3fee9bd83",
+      "message": {
+        "id": "b4e0271c-e250-4d9a-936d-67a3fee9bd83",
+        "author": {
+          "role": "assistant",
+          "metadata": {}
+        },
+        "create_time": 1777179075.90204,
+        "content": {
+          "content_type": "code",
+          "language": "json",
+          "text": "{\"prompt\": null, \"size\": \"1024x1024\", \"transparent_background\": true}"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1.0,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200012
+            ]
+          },
+          "is_complete": true,
+          "citations": [],
+          "content_references": [],
+          "resolved_model_slug": "gpt-5-3",
+          "request_id": "817002b7-7d40-4568-ac95-1372a47846d4",
+          "message_type": "next",
+          "turn_exchange_id": "911631a8-b5f4-4ca5-9021-936f543c8a2c",
+          "model_slug": "gpt-5-3",
+          "default_model_slug": "gpt-5-3",
+          "parent_id": "7197d1b0-5453-4110-80ad-de58bc10d032",
+          "shared_conversation_id": "69ed99fc-4ac8-8322-908f-a0924fd76571",
+          "can_save": false
+        },
+        "recipient": "t2uay3k.sj1i4kz",
+        "channel": "commentary"
+      },
+      "parent": "6df8b079-f1bc-4013-960b-c7eb644b5301",
+      "children": [
+        "ba4c5f45-64fe-417d-ac2d-e8aeb4b62aeb"
+      ]
+    },
+    {
+      "id": "ba4c5f45-64fe-417d-ac2d-e8aeb4b62aeb",
+      "message": {
+        "id": "ba4c5f45-64fe-417d-ac2d-e8aeb4b62aeb",
+        "author": {
+          "role": "tool",
+          "name": "t2uay3k.sj1i4kz",
+          "metadata": {}
+        },
+        "content": {
+          "content_type": "multimodal_text",
+          "parts": [
+            {
+              "content_type": "image_asset_pointer",
+              "asset_pointer": "sediment://file_0000000021a87208903a6e5f919c85f8?shared_conversation_id=69ed99fc-4ac8-8322-908f-a0924fd76571",
+              "size_bytes": 2635926,
+              "width": 1536,
+              "height": 1024,
+              "metadata": {
+                "dalle": {
+                  "gen_id": "ab2dca07-cdbe-45a9-8466-731c22e6a0a2",
+                  "prompt": "",
+                  "serialization_title": "DALL-E generation metadata"
+                },
+                "generation": {
+                  "gen_id": "ab2dca07-cdbe-45a9-8466-731c22e6a0a2",
+                  "gen_size": "xlimage",
+                  "height": 1024,
+                  "width": 1536,
+                  "transparent_background": true,
+                  "serialization_title": "Image Generation metadata",
+                  "orientation": "landscape"
+                },
+                "container_pixel_height": 1024,
+                "container_pixel_width": 1536,
+                "sanitized": false
+              }
+            }
+          ]
+        },
+        "status": "finished_successfully",
+        "weight": 0.0,
+        "metadata": {
+          "async_task_id": "imagegen_69ed99c92d0481919e13c4aff014d7cf",
+          "async_task_title": "Python logo blueprint drawing",
+          "async_task_type": "image_gen",
+          "image_gen_title": "Python logo blueprint drawing",
+          "response_message_id": "ba4c5f45-64fe-417d-ac2d-e8aeb4b62aeb",
+          "turn_exchange_id": "911631a8-b5f4-4ca5-9021-936f543c8a2c",
+          "shared_conversation_id": "69ed99fc-4ac8-8322-908f-a0924fd76571",
+          "can_save": false
+        },
+        "recipient": "all"
+      },
+      "parent": "b4e0271c-e250-4d9a-936d-67a3fee9bd83",
+      "children": []
+    }
+  ],
+  "has_user_editable_context": false,
+  "highlighted_message_id": "ba4c5f45-64fe-417d-ac2d-e8aeb4b62aeb",
+  "continue_conversation_url": "https://chatgpt.com/share/69ed99fc-4ac8-8322-908f-a0924fd76571/continue",
+  "moderation_state": {
+    "has_been_moderated": false,
+    "has_been_blocked": false,
+    "has_been_accepted": false,
+    "has_been_auto_blocked": false,
+    "has_been_auto_moderated": false
+  },
+  "is_indexable": false,
+  "is_better_metatags_enabled": true,
+  "backing_conversation_id": "69ed997f-f340-8322-881a-346e6574f1a0",
+  "is_potion_share": false,
+  "citron_only": false
+}
