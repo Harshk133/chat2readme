@@ -2,7 +2,7 @@
 # ⚡ Chat2Readme
 
 
-![Logo](C:/Users/Harsh/Downloads/Chat2Readme%20(1).png)
+![Chat2Readme Demo](assets/demo.png)
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/) 
 
