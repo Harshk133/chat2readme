@@ -1,16 +1,25 @@
-
 # ⚡ Chat2Readme
 
+<p align="center">
+  <img src="assets/Chat2Readme.png" alt="Chat2Readme Demo" width="700"/>
+</p>
 
-![Chat2Readme Demo](assets/demo.png)
+<p align="center">
+  <a href="https://choosealicense.com/licenses/mit/">
+    <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="MIT License"/>
+  </a>
+  <a href="https://www.youtube.com/@ProgrammingNCodingWithHarsh/videos">
+    <img src="https://img.shields.io/badge/hello%20world%20programmer-FFA500" alt="YouTube Channel"/>
+  </a>
+  <img src="https://img.shields.io/badge/build-passing-brightgreen?style=for-the-badge" alt="Build Status"/>
+  <img src="https://img.shields.io/badge/github-repo-orange?logo=github" alt="GitHub Repo"/>
+</p>
 
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/) 
+<p align="center">
+  <b>Convert shared ChatGPT conversations into clean, structured README.md files in seconds.</b>
+</p>
 
-[![Just Code](https://img.shields.io/badge/hello%20world%20programmer-FFA500)](https://www.youtube.com/@ProgrammingNCodingWithHarsh/videos)
-
-[![Just Code](https://img.shields.io/badge/build-passing-brightgreen?style=for-the-badge)]()
-
-[![Just Code](https://img.shields.io/badge/github-repo-orange?logo=github)]()
+---
 
 Convert shared ChatGPT conversations into clean, structured README.md files in seconds.
 
@@ -23,12 +32,7 @@ It is especially useful for:
 - Students creating project documentation
 - Engineers converting technical discussions into reusable docs
 
-
-
-
-
-
-
+---
 
 ## Features
 
@@ -41,5 +45,3 @@ It is especially useful for:
 - Offline operation
 - Lightweight and dependency-friendly
 - Extensible architecture
-
-
