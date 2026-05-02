@@ -7,6 +7,7 @@ from fetcher import fetch_chatgpt_share
 from markdowns import to_markdown
 from pdf_generator import to_pdf
 from links_extractor import extract_urls_from_json
+from notion_markdown import NotionMarkdownFormatter
 
 
 # ---------------------------------------------------------
@@ -90,6 +91,7 @@ if __name__ == "__main__":
     os.makedirs("json", exist_ok=True)
     os.makedirs("readmes", exist_ok=True)
     os.makedirs("pdfs", exist_ok=True)
+    os.makedirs("notions", exist_ok=True)
 
     # -----------------------------------------------------
     # Save raw JSON
@@ -162,3 +164,23 @@ if __name__ == "__main__":
     pdf_path = f"pdfs/chat_{share_id}.pdf"
 
     to_pdf(markdown, pdf_path, links=links)
+
+    # -----------------------------------------------------
+    # Convert to Notion format
+    # -----------------------------------------------------
+
+    formatter = NotionMarkdownFormatter()
+
+    notion_markdown = formatter.convert(markdown)
+
+    notion_path = f"notions/NOTION_{share_id}.md"
+
+    with open(
+        notion_path,
+        "w",
+        encoding="utf-8"
+    ) as f:
+
+        f.write(notion_markdown)
+
+    print(f"Saved → {notion_path}")
