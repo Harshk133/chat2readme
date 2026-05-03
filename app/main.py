@@ -171,7 +171,8 @@ if __name__ == "__main__":
 
     formatter = NotionMarkdownFormatter()
 
-    notion_markdown = formatter.convert(markdown)
+    # notion_markdown = formatter.convert(markdown)
+    notion_markdown = formatter.from_chatgpt_json(open(json_path).read(), tags=["ai"])
 
     notion_path = f"notions/NOTION_{share_id}.md"
 
@@ -182,5 +183,6 @@ if __name__ == "__main__":
     ) as f:
 
         f.write(notion_markdown)
+
 
     print(f"Saved → {notion_path}")
