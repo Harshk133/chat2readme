@@ -46,4 +46,4 @@ It is especially useful for:
 - Lightweight and dependency-friendly
 - Extensible architecture
 
-Give a Star 🌟 to this repository!!
+Give a Star 🌟 to this repository!
