@@ -8,6 +8,29 @@ export default function Home() {
   const [markdown, setMarkdown] = useState("");
   const [loading, setLoading] = useState(false);
 
+  const downloadMarkdown = () => {
+    if (!markdown) return;
+
+    const blob = new Blob([markdown], {
+      type: "text/markdown",
+    });
+
+    const fileUrl = window.URL.createObjectURL(blob);
+
+    const link = document.createElement("a");
+
+    link.href = fileUrl;
+    link.download = "README.md";
+
+    document.body.appendChild(link);
+
+    link.click();
+
+    document.body.removeChild(link);
+
+    window.URL.revokeObjectURL(fileUrl);
+  };
+
   const handleConvert = async () => {
     if (!url) return;
 
@@ -80,7 +103,7 @@ export default function Home() {
 
             </div>
 
-<br />
+            <br />
 
 
             <div className="bg-zinc-900 rounded-2xl border border-zinc-800 p-6 overflow-auto">
@@ -102,7 +125,18 @@ export default function Home() {
               </button>
             </div>
 
+            <br />
+
+            <button
+              onClick={downloadMarkdown}
+              className="px-4 py-2 rounded-lg bg-blue-500 hover:bg-blue-600 text-white transition"
+            >
+              Download README.md
+            </button>
+
           </div>
+
+
         )}
       </div>
     </main>
