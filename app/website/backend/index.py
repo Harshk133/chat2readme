@@ -29,28 +29,34 @@ def home():
         "message": "Backend Working"
     })
 
+# @app.route("/convert", methods=["POST"])
+# def convert():
+#     body = request.json
+#     url = body.get("url")
+
+#     data = fetch_chatgpt_share(url)
+
+#     markdown = to_markdown(data)
+
+#     links = {}
+
+#     try:
+#         links = extract_urls_from_json(data)
+#     except:
+#         pass
+
+#     if body.get("include_links", True):
+#         markdown = append_links_section(markdown, links)
+
+#     return jsonify({
+#         "markdown": markdown,
+#         "links": len(links)
+#     })
+
 @app.route("/convert", methods=["POST"])
 def convert():
-    body = request.json
-    url = body.get("url")
-
-    data = fetch_chatgpt_share(url)
-
-    markdown = to_markdown(data)
-
-    links = {}
-
-    try:
-        links = extract_urls_from_json(data)
-    except:
-        pass
-
-    if body.get("include_links", True):
-        markdown = append_links_section(markdown, links)
-
     return jsonify({
-        "markdown": markdown,
-        "links": len(links)
+        "message": "convert route works"
     })
 
 if __name__ == "__main__":
