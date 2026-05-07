@@ -15,7 +15,7 @@ def fetch_chatgpt_share(share_url: str) -> dict:
         "Connection": "keep-alive",
     }
 
-    req = urllib.request.Request(url, headers=headers)
+    req = urllib.request.Request(share_url, headers=headers)
 
     with urllib.request.urlopen(req) as response:
         return response.read().decode("utf-8")
