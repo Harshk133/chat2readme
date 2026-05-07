@@ -37,7 +37,7 @@ export default function Home() {
     setLoading(true);
 
     try {
-      const response = await fetch(`${process.env.NEXT_BACKEND_URL}/convert`, {
+      const response = await fetch(`https://chat2readme-d2yf.vercel.app/convert`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
