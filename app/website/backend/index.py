@@ -9,10 +9,14 @@ from links_extractor import extract_urls_from_json
 app = Flask(__name__)
 CORS(app)
 
-@app.route("/helloworld", methods=["GET"])
-def helloworld():
+from flask import Flask, jsonify
+
+app = Flask(__name__)
+
+@app.route("/")
+def home():
     return jsonify({
-        "message": "Hello world!"
+        "message": "Backend Working"
     })
 
 @app.route("/convert", methods=["POST"])
