@@ -11,7 +11,7 @@ app = Flask(__name__)
 CORS(
     app,
     resources={
-        r"/*": {
+        r"/convert": {
             "origins": [
                 "https://chat2readme-o3fv.vercel.app"
             ]
