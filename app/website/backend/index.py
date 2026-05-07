@@ -13,13 +13,13 @@ from flask import Flask, jsonify
 
 app = Flask(__name__)
 
-@app.route("/api/")
+@app.route("/")
 def home():
     return jsonify({
         "message": "Backend Working"
     })
 
-@app.route("/api/convert", methods=["POST"])
+@app.route("/convert", methods=["POST"])
 def convert():
     body = request.json
     url = body.get("url")
