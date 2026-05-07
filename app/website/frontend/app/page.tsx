@@ -37,7 +37,7 @@ export default function Home() {
     setLoading(true);
 
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/convert`, {
+      const response = await fetch(`${process.env.BACKEND_URL}/convert`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
