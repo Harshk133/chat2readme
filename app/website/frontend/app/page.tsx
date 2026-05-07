@@ -37,20 +37,36 @@ export default function Home() {
     setLoading(true);
 
     try {
+      // const response = await fetch(`https://chat2readme-d2yf.vercel.app/convert`, {
+      //   method: "POST",
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //   },
+      //   body: JSON.stringify({
+      //     url,
+      //     include_links: true,
+      //   }),
+      // });
       const response = await fetch(`https://chat2readme-d2yf.vercel.app/convert`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          url,
-          include_links: true,
-        }),
-      });
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ url, include_links: true }),
+});
 
-      const data = await response.json();
 
-      setMarkdown(data.markdown);
+      // const data = await response.json();
+
+      // setMarkdown(data.markdown);
+      // Always check if response is ok BEFORE parsing JSON
+if (!response.ok) {
+  const errText = await response.text();   // safe — won't crash on HTML
+  console.error("Server error:", errText);
+  alert(`Server error ${response.status}`);
+  return;
+}
+
+const data = await response.json();
+setMarkdown(data.markdown);
     } catch (error) {
       console.error(error);
       alert("Conversion failed");

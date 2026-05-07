@@ -96,31 +96,39 @@ def home():
 @app.route("/health")
 def health():
     return jsonify({"status": "ok"})
-
 @app.route("/convert", methods=["POST", "OPTIONS"])
 def convert():
     if request.method == "OPTIONS":
         return jsonify({"message": "OPTIONS works"}), 200
 
-    body = request.json
-    url = body.get("url")
-
-    data = fetch_chatgpt_share(url)
-    markdown = to_markdown(data)
-    links = {}
-
     try:
-        links = extract_urls_from_json(data)
-    except:
-        pass
+        body = request.json
 
-    if body.get("include_links", True):
-        markdown = append_links_section(markdown, links)
+        if not body or not body.get("url"):
+            return jsonify({"error": "Missing URL"}), 400
 
-    return jsonify({
-        "markdown": markdown,
-        "links": len(links)
-    })
+        url = body.get("url")
+
+        data = fetch_chatgpt_share(url)
+        markdown = to_markdown(data)
+        links = {}
+
+        try:
+            links = extract_urls_from_json(data)
+        except Exception as e:
+            print(f"Link extraction failed: {e}")
+
+        if body.get("include_links", True):
+            markdown = append_links_section(markdown, links)
+
+        return jsonify({
+            "markdown": markdown,
+            "links": len(links)
+        })
+
+    except Exception as e:
+        print(f"Convert error: {e}")                        # shows in Vercel logs
+        return jsonify({"error": str(e)}), 500              # returns JSON, not HTML
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
