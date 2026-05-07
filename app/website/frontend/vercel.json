@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/convert.py",
+      "use": "@vercel/python"
+    },
+    {
+      "src": "package.json",
+      "use": "@vercel/next"
+    }
+  ]
+}

@@ -1,17 +1,19 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 
-from main import append_links_section
 from fetcher import fetch_chatgpt_share
 from markdowns import to_markdown
 from links_extractor import extract_urls_from_json
+from main import append_links_section
 
 app = Flask(__name__)
 CORS(app)
 
 @app.route("/convert", methods=["POST"])
 def convert():
-    body = request.json
+
+    body = request.get_json()
+
     url = body.get("url")
 
     data = fetch_chatgpt_share(url)
@@ -33,5 +35,4 @@ def convert():
         "links": len(links)
     })
 
-if __name__ == "__main__":
-    app.run(debug=True, port=5000)
+handler = app

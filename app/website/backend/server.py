@@ -9,6 +9,12 @@ from links_extractor import extract_urls_from_json
 app = Flask(__name__)
 CORS(app)
 
+@app.route("/helloworld", methods=["GET"])
+def helloworld():
+    return jsonify({
+        "message": "Hello world!"
+    })
+
 @app.route("/convert", methods=["POST"])
 def convert():
     body = request.json
@@ -34,4 +40,4 @@ def convert():
     })
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5000)
+    app.run(host="0.0.0.0", port=5000)

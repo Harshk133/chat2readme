@@ -1,0 +1,199 @@
+"""
+links_extractor.py
+
+Convert a ChatGPT shared conversation JSON (Deep Research mode)
+into a README.md with all research links extracted.
+
+Usage:
+    python chatgpt_deep_research_to_readme.py <input.json> [output.md]
+
+How it works:
+    Deep Research links live inside a nested JSON *string* called widget_state.
+    This script recursively walks the entire JSON tree, finds every widget_state
+    string, parses it, and pulls URLs from content_references inside report_message.
+"""
+
+import json
+import re
+import sys
+from pathlib import Path
+
+
+# ------------------------------------------------------------------
+# Step 1: Walk the entire JSON tree and find widget_state strings
+# ------------------------------------------------------------------
+
+def extract_urls_from_json(data: dict) -> dict:
+    """
+    Recursively walk the JSON and extract all URLs from widget_state blobs.
+    Returns: { clean_url: { title, snippet, source } }
+    """
+    found = {}
+
+    def process_widget_state(ws_str):
+        """Parse widget_state JSON string and pull content_references."""
+        if not ws_str or not isinstance(ws_str, str):
+            return
+        try:
+            ws = json.loads(ws_str)
+        except json.JSONDecodeError:
+            return
+
+        # The refs live at: report_message -> metadata -> content_references
+        refs = (
+            ws
+            .get("report_message", {})
+            .get("metadata", {})
+            .get("content_references", [])
+        )
+
+        for ref in refs:
+            # Skip refs explicitly marked invalid
+            if ref.get("invalid"):
+                continue
+
+            raw_url = ref.get("url", "")
+            if not raw_url:
+                continue
+
+            # Strip URL fragments (#anchor) and trailing slashes
+            clean_url = raw_url.split("#")[0].rstrip("/")
+            if not clean_url.startswith("http"):
+                continue
+
+            # Keep first occurrence (has the most complete title/snippet)
+            if clean_url not in found:
+                found[clean_url] = {
+                    "url":     clean_url,
+                    "title":   ref.get("title", "").strip(),
+                    "snippet": ref.get("snippet", "").strip(),
+                    "source":  ref.get("attribution") or ref.get("source_name", ""),
+                }
+
+    def walk(obj, depth=0):
+        """Recursively walk any JSON structure."""
+        if depth > 15:
+            return
+        if isinstance(obj, dict):
+            for key, value in obj.items():
+                if key == "widget_state" and isinstance(value, str):
+                    process_widget_state(value)
+                else:
+                    walk(value, depth + 1)
+        elif isinstance(obj, list):
+            for item in obj:
+                walk(item, depth + 1)
+
+    walk(data)
+    return found
+
+
+# ------------------------------------------------------------------
+# Step 2: Group URLs by domain
+# ------------------------------------------------------------------
+
+def group_by_domain(refs: dict) -> dict:
+    """Group { url: info } by top-level domain."""
+    groups = {}
+    for url, info in refs.items():
+        m = re.match(r"https?://(?:www\.)?([^/]+)", url)
+        domain = m.group(1) if m else "other"
+        groups.setdefault(domain, []).append(info)
+    for domain in groups:
+        groups[domain].sort(key=lambda x: x["title"].lower())
+    return groups
+
+
+# ------------------------------------------------------------------
+# Step 3: Build README.md
+# ------------------------------------------------------------------
+
+def build_readme(refs: dict, chat_title: str = "") -> str:
+    lines = []
+
+    heading = chat_title.strip() or "Deep Research Links"
+
+    lines += [
+        f"# {heading}",
+        "",
+        "> Links extracted from a ChatGPT Deep Research shared conversation.",
+        f"> Total links found: **{len(refs)}**",
+        "",
+        "---",
+        "",
+    ]
+
+    if not refs:
+        lines.append("*No links were found in this conversation.*")
+        return "\n".join(lines)
+
+    groups = group_by_domain(refs)
+
+    lines += ["## Links by Source", ""]
+
+    for domain, items in sorted(groups.items()):
+        lines += [f"### {domain}", ""]
+        for info in items:
+            title   = info["title"] or info["url"]
+            url     = info["url"]
+            snippet = info["snippet"]
+            lines.append(f"#### [{title}]({url})")
+            if snippet:
+                lines += ["", f"> {snippet}"]
+            lines.append("")
+
+    lines += [
+        "---",
+        "",
+        "## All Links (plain list)",
+        "",
+    ]
+    for url, info in refs.items():
+        title = info["title"] or url
+        lines.append(f"- [{title}]({url})")
+
+    lines += [
+        "",
+        "---",
+        "",
+        "*Auto-generated by `chatgpt_deep_research_to_readme.py`*",
+        "",
+    ]
+
+    return "\n".join(lines)
+
+
+# ------------------------------------------------------------------
+# CLI entry point
+# ------------------------------------------------------------------
+
+# def main():
+#     if len(sys.argv) < 2:
+#         print("Usage: python chatgpt_deep_research_to_readme.py <input.json> [output.md]")
+#         sys.exit(1)
+
+#     input_path  = Path(sys.argv[1])
+#     output_path = Path(sys.argv[2]) if len(sys.argv) > 2 else input_path.with_suffix(".md")
+
+#     if not input_path.exists():
+#         print(f"ERROR: File not found: {input_path}")
+#         sys.exit(1)
+
+#     print(f"Reading:   {input_path}")
+#     data = json.loads(input_path.read_text(encoding="utf-8"))
+
+#     chat_title = data.get("title", "") or ""
+
+#     refs = extract_urls_from_json(data)
+#     print(f"Extracted: {len(refs)} unique links")
+
+#     if not refs:
+#         print("WARNING: No links found. Make sure this is a Deep Research conversation JSON.")
+
+#     readme = build_readme(refs, chat_title)
+#     output_path.write_text(readme, encoding="utf-8")
+#     print(f"Written:   {output_path}")
+
+
+# if __name__ == "__main__":
+#     main()
