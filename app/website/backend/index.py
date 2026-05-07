@@ -7,7 +7,17 @@ from markdowns import to_markdown
 from links_extractor import extract_urls_from_json
 
 app = Flask(__name__)
-CORS(app)
+# CORS CONFIG
+CORS(
+    app,
+    resources={
+        r"/*": {
+            "origins": [
+                "https://chat2readme-o3fv.vercel.app"
+            ]
+        }
+    }
+)
 
 from flask import Flask, jsonify
 
