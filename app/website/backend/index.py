@@ -56,39 +56,13 @@ def home():
 @app.route("/convert", methods=["POST", "OPTIONS"])
 def convert():
 
-    # HANDLE PREFLIGHT REQUEST
     if request.method == "OPTIONS":
-        return jsonify({"ok": True}), 200
-
-    try:
-        body = request.json
-        url = body.get("url")
-
-        data = fetch_chatgpt_share(url)
-
-        markdown = to_markdown(data)
-
-        links = {}
-
-        try:
-            links = extract_urls_from_json(data)
-        except Exception as e:
-            print("Link error:", str(e))
-
-        if body.get("include_links", True):
-            markdown = append_links_section(markdown, links)
-
         return jsonify({
-            "markdown": markdown,
-            "links": len(links)
-        })
+            "message": "OPTIONS works"
+        }), 200
 
-    except Exception as e:
-        print("MAIN ERROR:", str(e))
-
-        return jsonify({
-            "error": str(e)
-        }), 500
-
+    return jsonify({
+        "message": "POST works"
+    }), 200
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
