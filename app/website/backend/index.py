@@ -6,6 +6,7 @@ from main import append_links_section
 from fetcher import fetch_chatgpt_share
 from markdowns import to_markdown
 from links_extractor import extract_urls_from_json
+import os
 
 app = Flask(__name__)   # ← Only ONE app
 
@@ -40,6 +41,10 @@ def convert():
         url = body.get("url")
 
         print(f"Received URL: {url}") 
+        # TEMP DEBUG - remove after fixing
+        api_key = os.environ.get("SCRAPER_API_KEY")
+        print(f"SCRAPER_API_KEY present: {bool(api_key)}")
+        print(f"SCRAPER_API_KEY value: {api_key[:5] if api_key else 'NOT SET'}")
 
         data = fetch_chatgpt_share(url)
         markdown = to_markdown(data)
