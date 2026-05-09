@@ -34,11 +34,17 @@ export default function Home() {
   const handleConvert = async () => {
     if (!url) return;
 
+    // Validate before sending
+    if (!url.includes("chatgpt.com/share/")) {
+      alert("Please paste a valid ChatGPT share URL (chatgpt.com/share/...)");
+      return;
+    }
+
     setLoading(true);
 
     try {
 
-      const response = await fetch(`${process.env.NEXT_BACKEND_URL}/convert`, {
+      const response = await fetch(`https://chat2readme-d2yf.vercel.app/convert`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ url, include_links: true }),

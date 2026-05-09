@@ -39,6 +39,8 @@ def convert():
 
         url = body.get("url")
 
+        print(f"Received URL: {url}") 
+
         data = fetch_chatgpt_share(url)
         markdown = to_markdown(data)
         links = {}
