@@ -79,9 +79,6 @@ export default function Home() {
 
         <Image src={"/Chat2Readme.png"} alt="Logo" />
 
-        <h1 className="text-5xl font-bold">
-          Chat2Readme
-        </h1>
 
         <p className="text-zinc-400">
           Convert ChatGPT shared chats into beautiful README.md files.
