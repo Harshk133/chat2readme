@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import ReactMarkdown from "react-markdown"
 
 export default function Home() {
@@ -75,6 +76,9 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-black text-white flex items-center justify-center p-6">
       <div className="w-full max-w-3xl space-y-6">
+
+        <Image src={"/Chat2Readme.png"} alt="Logo" />
+
         <h1 className="text-5xl font-bold">
           Chat2Readme
         </h1>
