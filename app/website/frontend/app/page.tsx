@@ -3,6 +3,9 @@
 import { useState } from "react";
 import Image from "next/image";
 import ReactMarkdown from "react-markdown"
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import PixelBlast from "./components/backgrounds/PixelBlast";
 
 export default function Home() {
   const [url, setUrl] = useState("");
@@ -74,17 +77,42 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen bg-black text-white flex items-center justify-center p-6">
-      <div className="w-full max-w-3xl space-y-6">
+    <>
+      <div className="fixed inset-0 -z-10 bg-black">
+        <PixelBlast
+          variant="square"
+          pixelSize={4}
+          color="orange"
+          patternScale={2}
+          patternDensity={1}
+          pixelSizeJitter={0}
+          enableRipples
+          rippleSpeed={0.4}
+          rippleThickness={0.12}
+          rippleIntensityScale={1.5}
+          liquid={false}
+          liquidStrength={0.12}
+          liquidRadius={1.2}
+          liquidWobbleSpeed={5}
+          speed={0.5}
+          edgeFade={0.25}
+          transparent
+        />
+      </div>
+      <div className="min-h-screen text-white flex flex-col relative z-10">
+        <Header />
+        <main className="flex-1 flex items-center justify-center p-6 pt-28">
+          <div className="w-full max-w-3xl space-y-8 bg-black/40 ">
+          <div className="text-center space-y-4">
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-zinc-400">
+              Chat2Readme
+            </h1>
+            <p className="text-zinc-300 text-xl text-bold">
+              Convert ChatGPT shared chats into beautiful README.md files.
+            </p>
+          </div>
 
-        <Image src={"/Chat2Readme.png"} alt="Logo" />
-
-
-        <p className="text-zinc-400">
-          Convert ChatGPT shared chats into beautiful README.md files.
-        </p>
-
-        <div className="flex gap-3">
+          <div className="flex gap-3">
           <input
             type="text"
             placeholder="Paste ChatGPT share URL"
@@ -152,7 +180,10 @@ export default function Home() {
 
 
         )}
+          </div>
+        </main>
+        <Footer />
       </div>
-    </main>
+    </>
   );
 }
