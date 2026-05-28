@@ -48,7 +48,11 @@ export default function Home() {
 
     try {
 
-      const response = await fetch(`https://chat2readme-d2yf.vercel.app/convert`, {
+      const apiUrl = process.env.NODE_ENV === "development" 
+        ? "http://localhost:5000/convert" 
+        : "https://chat2readme-d2yf.vercel.app/convert";
+
+      const response = await fetch(apiUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ url, include_links: true }),
