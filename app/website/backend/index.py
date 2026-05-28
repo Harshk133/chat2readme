@@ -69,37 +69,4 @@ def convert():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
-
-import re
-import json
-import requests
-
-
-def fetch_chatgpt_share(url):
-    headers = {
-        "User-Agent": (
-            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-            "AppleWebKit/537.36 (KHTML, like Gecko) "
-            "Chrome/124.0.0.0 Safari/537.36"
-        )
-    }
-
-    response = requests.get(url, headers=headers)
-
-    response.raise_for_status()
-
-    html = response.text
-
-    # Extract JSON from __NEXT_DATA__
-    match = re.search(
-        r'<script id="__NEXT_DATA__" type="application/json">(.*?)</script>',
-        html,
-        re.DOTALL
-    )
-
-    if not match:
-        raise Exception("Could not extract conversation data")
-
-    json_data = json.loads(match.group(1))
-
-    return json_data
+
