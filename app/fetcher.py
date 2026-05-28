@@ -38,13 +38,13 @@ SCRAPER_API_KEY = os.environ.get("SCRAPER_API_KEY")
 def fetch_chatgpt_share(share_url: str) -> dict:
 
     # Normalize URL
-    if "/share/" in share_url and "/backend-api/" not in share_url:
+    if "/share/" in share_url and "/backend-anon/" not in share_url:
         share_id = share_url.rstrip("/").split("/share/")[-1]
-        api_url = f"https://chatgpt.com/backend-api/share/{share_id}"
+        api_url = f"https://chatgpt.com/backend-anon/share/{share_id}"
     else:
         api_url = share_url
 
-    share_page_url = api_url.replace("/backend-api/share/", "/share/")
+    share_page_url = api_url.replace("/backend-anon/share/", "/share/")
 
     # Route through ScraperAPI
     proxy_url = f"http://scraperapi:{SCRAPER_API_KEY}@proxy-server.scraperapi.com:8001"
