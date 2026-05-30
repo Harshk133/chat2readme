@@ -46,4 +46,7 @@ It is especially useful for:
 - Lightweight and dependency-friendly
 - Extensible architecture
 
+
+![Alt](https://repobeats.axiom.co/api/embed/0677aa730cb3caa3f8069c32242ac43977aaaec3.svg "Repobeats analytics image")
+
 Give a Star 🌟 to this repository!
